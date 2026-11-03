@@ -1728,5 +1728,6 @@ body.rail-open #secs a.xlink .lbl{opacity:1}#secs .xdiv{height:1px;background:va
 function add(){var s=document.getElementById('secs');if(!s||s.querySelector('.xlink'))return;var d=document.createElement('span');d.className='xlink xdiv';s.appendChild(d);
 L.forEach(function(x){var a=document.createElement('a');a.className='xlink';a.href=x[0];a.title=x[1];a.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+x[2]+'</svg><span class="lbl">'+x[1]+'</span>';s.appendChild(a)})}
 add();var s=document.getElementById('secs');if(s)new MutationObserver(add).observe(s,{childList:true})})();</script>
+<script src="sctcm.js"></script>
 </body>
 </html>
