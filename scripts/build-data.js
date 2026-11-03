@@ -665,7 +665,7 @@ html = html.replace(/\/\*OPS_DATA_START\*\/[\s\S]*?\/\*OPS_DATA_END\*\//, () => 
 // so uploading a new index.html never clashes with the build
 fs.writeFileSync(path.join(OUT, 'index.html'), html);
 if (fs.existsSync(path.join(ROOT, 'admin.html'))) fs.copyFileSync(path.join(ROOT, 'admin.html'), path.join(OUT, 'admin.html'));
-for (const f of ['brewhouse.html', 'dashboard-config.js']) if (fs.existsSync(path.join(ROOT, f))) fs.copyFileSync(path.join(ROOT, f), path.join(OUT, f));
+for (const f of ['brewhouse.html', 'dashboard-config.js', 'sctcm.js']) if (fs.existsSync(path.join(ROOT, f))) fs.copyFileSync(path.join(ROOT, f), path.join(OUT, f));
 fs.writeFileSync(path.join(OUT, '.nojekyll'), '');
 fs.copyFileSync(path.join(ROOT, 'data', 'ops-data.json'), path.join(OUT, 'data', 'ops-data.json'));
 fs.copyFileSync(path.join(ROOT, 'data', 'ops-data.js'), path.join(OUT, 'data', 'ops-data.js'));
